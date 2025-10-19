@@ -1,0 +1,26 @@
+# Profile Viewer Program
+# Shows user profile based on entered username
+
+# Dummy user data stored in a dictionary
+users = {
+    "ayesha": {"name": "Ayesha Wasim", "age": 20, "city": "Karachi", "email": "ayesha@example.com"},
+    "alikhan": {"name": "Ali Khan", "age": 22, "city": "Lahore", "email": "ali@example.com"},
+    "fatima": {"name": "Fatima Pervez", "age": 19, "city": "Islamabad", "email": "fatima@example.com"},
+    "usman": {"name": "Usman Ahmed", "age": 23, "city": "Faisalabad", "email": "usman@example.com"},
+    "sara": {"name": "Sara Malik", "age": 21, "city": "Multan", "email": "sara@example.com"}
+}
+
+print("=== Profile Viewer ===")
+username = input("Enter username: ").lower().strip()
+
+if username in users:
+    profile = users[username]
+    print("\n--- User Profile ---")
+    print(f"Name: {profile['name']}")
+    print(f"Age: {profile['age']}")
+    print(f"City: {profile['city']}")
+    print(f"Email: {profile['email']}")
+else:
+    print("\n❌ No profile found for this username.")
+
+print("\nProgram ended.")
